@@ -4,6 +4,9 @@
   "author": "Gonzalo Vazquez",
   "description": "Landing page for Us Makes Two",
   "private": true,
+  "scripts": {
+    "start": "lite-server src"
+  },
   "contributors": [
     {
       "name": "Gonzalo Vazquez",
@@ -12,10 +15,9 @@
   ],
   "repository": {
     "type": "git",
-    
     "url": "https://github.com/gonzalovazquez/usmakestwo.git"
-    
   },
   "devDependencies": {
+    "lite-server": "^2.1.0"
   }
 }
