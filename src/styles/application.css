@@ -3648,9 +3648,14 @@ tbody.collapse.in {
   padding: 30px 0;
   margin-bottom: 0;
   color: white;
-  background: #2e2f41 url(../images/bg-1.png) 0 0 no-repeat;
   background-size: cover;
   text-align: center;
+}
+.home-page-image {
+  background: url(../images/pexels-photo-316879.jpeg) 0 0 no-repeat;
+}
+.filmy-image {
+  background: url(../images/bg-1.png) 0 0 no-repeat;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -3694,7 +3699,6 @@ tbody.collapse.in {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
   height: auto;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -6096,7 +6100,7 @@ tbody.collapse.in {
 .subscribe-section {
   background: #2e2f41 url(../images/bg-2.png) 0 0 no-repeat;
   text-align: center;
-  padding: 100px 0;
+  padding: 50px 0;
   background-size: cover;
   color: white;
 }
