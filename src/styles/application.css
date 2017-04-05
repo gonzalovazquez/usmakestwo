@@ -3652,6 +3652,7 @@ tbody.collapse.in {
   text-align: center;
 }
 .home-page-image {
+  background-size: cover !important;
   background: url(../images/pexels-photo-316879.jpeg) 0 0 no-repeat;
 }
 .filmy-image {
@@ -6294,4 +6295,28 @@ tbody.collapse.in {
 }
 .sign-in-up-content .sign-in-up-links .sep {
   margin: 0 4px;
+}
+
+.icon {
+  background: url(../images/sprite.png);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon-s-custom-dev {
+  background-position: -252px 0;
+  width: 100px;
+  height: 80px;
+}
+
+.icon-s-web-dev {
+  background-position: 0 -82px;
+  width: 100px;
+  height: 80px;
+}
+
+.icon-s-mobile-dev {
+  background-position: 0 -164px;
+  width: 100px;
+  height: 80px;
 }
