@@ -15,12 +15,12 @@
     <meta name="googlebot" content="index,follow">
 
     <!-- Title -->
-    <title>UsMakesTwo</title>
+    <title>Filmy On The Go</title>
 
     <!-- Templates core CSS -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href="styles/application.css" rel="stylesheet">
+    <link href="../styles/application.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
@@ -48,7 +48,7 @@
     <![endif]-->
 
     <!-- Modernizr Scripts -->
-    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    <script src="../js/vendor/modernizr-2.7.1.min.js"></script>
   </head>
   <body class="index" id="to-top">
 
@@ -57,7 +57,7 @@
 
       <ul class="nav-side-nav">
         <li><a class="tooltip-side-nav" href="#section-1" title="" data-original-title="Services" data-placement="left"></a></li>
-        <li><a class="tooltip-side-nav" href="#section-3" title="" data-original-title="Clients" data-placement="left"></a></li>
+        <li><a class="tooltip-side-nav" href="#section-3" title="" data-original-title="Subscribe" data-placement="left"></a></li>
         <li><a class="tooltip-side-nav" href="#to-top" title="" data-original-title="Back" data-placement="left"></a></li>
       </ul>
 
@@ -67,28 +67,46 @@
 
 
     <!-- Jumbotron -->
-    <header class="jumbotron home-page-image" role="banner">
+    <header class="jumbotron filmy-image" role="banner">
 
       <div class="container">
 
         <div class="row">
 
-          <div class="col-md-12">
+          <div class="col-md-7">
 
             <!-- Logo -->
             <figure class="text-center">
               <a href="./index.html">
-                <img class="img-logo" src="images/UsMakesTwoLogo.png" alt="" style="width: 120px;">
+                <img class="img-logo" src="../images/logo.png" alt="" style="width: 240px;">>
               </a>
-              <!-- Title -->
-              <h1 style="margin-top: 0px; text-shadow: 2px 1px #333;">UsMakesTwo</h1>
             </figure> <!-- /.text-center -->
+
+            <!-- Title -->
+            <h1>Filmy On The Go</h1>
+
             <!-- Sub title -->
-            <p style="text-shadow: 1px 1px #333;">
-              Dedicated to provide latest technologies to move the financial industry forward.
+            <p>
+              Your favorite movies on then back of your pocket.
             </p>
 
-          </div> <!-- /.col-md-12 -->
+            <!-- Button -->
+            <p class="btn-app-store">
+              <a class="btn btn-danger btn-lg" href="#fakelinks">
+                <img src="../images/btn-app-store.png" alt="">
+              </a>
+            </p> <!-- /.btn-app-store -->
+
+          </div> <!-- /.col-md-7 -->
+
+          <div class="col-md-5">
+
+            <!-- Images showcase -->
+            <figure>
+              <img class="img-iPhone" src="../images/iphone/filmy.png" alt="">
+            </figure>
+
+          </div> <!-- /.col-md-5 -->
 
         </div> <!-- /.row -->
 
@@ -109,40 +127,45 @@
           <div class="col-md-4 col-services">
 
             <!-- Icons -->
-            <i class="icon icon-s-web-dev"></i>
+            <figure>
+              <img class="img-services" src="../images/icons/flag.png" alt="">
+            </figure>
 
             <!-- Title -->
-            <h4>Software Development</h4>
+            <h4>Flag</h4>
 
             <!-- Description -->
-            <p>We offer full-cycle development services for web, 
-              mobile and desktop using latest open source technologies.</p>
+            <p>Save your favorite movies and build your virtual movie library.</p>
 
           </div> <!-- /.col-md-4 -->
 
           <div class="col-md-4 col-services">
 
             <!-- Icons -->
-            <i class="icon icon-s-custom-dev"></i>
+            <figure>
+              <img class="img-services" src="../images/icons/search.png" alt="">
+            </figure>
 
             <!-- Title -->
-            <h4>API Development</h4>
+            <h4>Search</h4>
 
             <!-- Description -->
-            <p>Building microservices that are easy to deploy and scale.</p>
+            <p>Find information about any movie.</p>
 
           </div> <!-- /.col-md-4 -->
 
           <div class="col-md-4 col-services">
 
             <!-- Icons -->
-            <i class="icon icon-s-mobile-dev"></i>
+            <figure>
+              <img class="img-services img-margin" src="../images/icons/world-map.png" alt="">
+            </figure>
 
             <!-- Title -->
-            <h4>Distributed Systems</h4>
+            <h4>World Map - Coming Soon</h4>
 
             <!-- Description -->
-            <p>Scale your application using Docker and Kubernetes to handle scale on-demand</p>
+            <p>Find showtimes around your area.</p>
 
           </div> <!-- /.col-md-4 -->
 
@@ -152,27 +175,48 @@
 
     </section> <!-- /.services-section -->
 
-    <!-- Clients -->
+    <!-- Subscribe -->
     <section class="subscribe-section" id="section-3">
 
       <div class="container">
 
-        <div class="row" style="padding-bottom: 30px;">
+        <div class="row">
 
           <div class="col-md-12">
 
             <!-- Title -->
-            <h2 style="padding-bottom: 80px;">Clients</h2>
+            <h2>Subscribe to get delightfully infrequent updates</h2>
 
             <!-- Subscribe form -->
             <div class="row">
 
-              <div class="col-md-6" style="padding-bottom: 30px;">
-                <img src="images/clients/td-bank-logo.png" style="width:200px;" />
-              </div> <!-- /.col-md-6 -->
+              <div class="col-md-6 col-md-offset-3 col-subscribe">
 
-              <div class="col-md-6" style="padding-bottom: 30px;">
-                <img src="images/clients/CIBC_logo.png" style="width:200px;" />
+                <!-- Begin MailChimp Signup Form -->
+              <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+              <style type="text/css">
+              	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+              	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+              	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+              </style>
+              <form action="//xyz.us13.list-manage.com/subscribe/post?u=b4fcadf105d41ac8556fe4f8b&amp;id=eac8d4bc9a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form form-inline" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll" class="form-group">
+                    <label class="sr-only" for="mce-EMAIL">Email address</label>
+              	    <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="Enter email address" required>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                      <input type="text" name="b_b4fcadf105d41ac8556fe4f8b_eac8d4bc9a" tabindex="-1" value="">
+                    </div>
+                  </div>
+                  <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success">Subscribe</button>
+              </form>
+
+                <section class="subscribe-description">
+
+                  <p>Don't worry. We do not spam :)</p>
+
+                </section> <!-- /.subscribe-description -->
+
               </div> <!-- /.col-md-6 -->
 
             </div> <!-- /.row -->
@@ -185,6 +229,9 @@
 
     </section> <!-- /.subscribe-section -->
 
+
+
+
     <!-- Footer -->
     <footer class="footer-section" role="contentinfo">
 
@@ -196,7 +243,7 @@
 
             <!-- Footer 1 -->
             <section>
-              <p>Made in <i class="fa fa-heart"></i> Canada.</p>
+              <p>Made with <i class="fa fa-heart"></i> two brothers.</p>
             </section>
 
             <!-- AddThis Button -->

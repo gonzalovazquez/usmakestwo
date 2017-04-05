@@ -3648,9 +3648,15 @@ tbody.collapse.in {
   padding: 30px 0;
   margin-bottom: 0;
   color: white;
-  background: #2e2f41 url(../images/bg-1.png) 0 0 no-repeat;
   background-size: cover;
   text-align: center;
+}
+.home-page-image {
+  background-size: cover !important;
+  background: url(../images/pexels-photo-316879.jpeg) 0 0 no-repeat;
+}
+.filmy-image {
+  background: url(../images/bg-1.png) 0 0 no-repeat;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -3694,7 +3700,6 @@ tbody.collapse.in {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
   height: auto;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -6096,7 +6101,7 @@ tbody.collapse.in {
 .subscribe-section {
   background: #2e2f41 url(../images/bg-2.png) 0 0 no-repeat;
   text-align: center;
-  padding: 100px 0;
+  padding: 50px 0;
   background-size: cover;
   color: white;
 }
@@ -6290,4 +6295,28 @@ tbody.collapse.in {
 }
 .sign-in-up-content .sign-in-up-links .sep {
   margin: 0 4px;
+}
+
+.icon {
+  background: url(../images/sprite.png);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon-s-custom-dev {
+  background-position: -252px 0;
+  width: 100px;
+  height: 80px;
+}
+
+.icon-s-web-dev {
+  background-position: 0 -82px;
+  width: 100px;
+  height: 80px;
+}
+
+.icon-s-mobile-dev {
+  background-position: 0 -164px;
+  width: 100px;
+  height: 80px;
 }
