@@ -83,10 +83,6 @@ jobs:
           command: |
             cd terraform
             terraform plan -out=../../terraform.plan
-      - persist_to_workspace:
-          root: *working_directory
-          paths:
-            - terraform.plan
 
   apply:
     <<: *apply_job
