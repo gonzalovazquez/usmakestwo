@@ -1,9 +1,9 @@
 variable "project_name" {
-  type = "string"
+  type    = "string"
   default = "personal-website-235123"
 }
 
 variable "website_domain" {
-  type = "string"
+  type    = "string"
   default = "www.usmakestwo.io"
 }
