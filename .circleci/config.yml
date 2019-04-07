@@ -29,31 +29,18 @@ save_repo: &save_repo
     paths:
       - *working_directory
 
-set_terraform_environment: &set_terraform_environment
-  run:
-    name: set terraform environment
-    command: |
-      cd && touch $BASH_ENV
-
-      if [ "${CIRCLE_BRANCH}" == "master" ]; then
-        echo 'export TERRAFORM_ENVIRONMENT=production' >> $BASH_ENV
-      else
-        echo 'export TERRAFORM_ENVIRONMENT=staging' >> $BASH_ENV
-      fi
-
 terraform_init: &terraform_init
   run:
     name: terraform init
     command: |
       source $BASH_ENV
-      cd environments/$TERRAFORM_ENVIRONMENT
+      cd environments/production
       terraform init
 
 apply_job: &apply_job
   <<: *default_config
   steps:
     - *restore_repo
-    - *set_terraform_environment
     - *terraform_init
     - attach_workspace:
         at: *working_directory
@@ -61,7 +48,7 @@ apply_job: &apply_job
         name: terraform apply
         command: |
           source $BASH_ENV
-          cd environments/$TERRAFORM_ENVIRONMENT
+          cd environments/production
           terraform apply --auto-approve ../../terraform.plan
 
 jobs:
@@ -70,12 +57,11 @@ jobs:
     <<: *default_config
     steps:
       - checkout
-      - *set_terraform_environment
       - run:
           name: terraform fmt
           command: |
             source $BASH_ENV
-            cd environments/$TERRAFORM_ENVIRONMENT
+            cd environments/production
 
             if [ $(terraform fmt | grep -v .terraform | tee fmt_result.txt | wc -l) -gt 0 ]; then
               echo "Format of this terraform files is not appropiate:"
@@ -96,13 +82,12 @@ jobs:
     <<: *default_config
     steps:
       - *restore_repo
-      - *set_terraform_environment
       - *terraform_init
       - run:
           name: terraform plan
           command: |
             source $BASH_ENV
-            cd environments/$TERRAFORM_ENVIRONMENT
+            cd environments/production
             terraform plan -out=../../terraform.plan
       - persist_to_workspace:
           root: *working_directory
