@@ -12,8 +12,6 @@ default_config: &default_config
   docker:
     - image: *base_image
   working_directory: *working_directory
-  environment:
-    BASH_ENV: /root/.bashrc
 
 repo_cache_key: &repo_cache_key
   v1-repo-{{ .Branch }}-{{ .Revision }}
@@ -33,7 +31,6 @@ terraform_init: &terraform_init
   run:
     name: terraform init
     command: |
-      source $BASH_ENV
       cd environments/production
       terraform init
 
@@ -47,7 +44,6 @@ apply_job: &apply_job
     - run:
         name: terraform apply
         command: |
-          source $BASH_ENV
           cd environments/production
           terraform apply --auto-approve ../../terraform.plan
 
@@ -60,7 +56,6 @@ jobs:
       - run:
           name: terraform fmt
           command: |
-            source $BASH_ENV
             cd environments/production
 
             if [ $(terraform fmt | grep -v .terraform | tee fmt_result.txt | wc -l) -gt 0 ]; then
@@ -86,7 +81,6 @@ jobs:
       - run:
           name: terraform plan
           command: |
-            source $BASH_ENV
             cd environments/production
             terraform plan -out=../../terraform.plan
       - persist_to_workspace:
