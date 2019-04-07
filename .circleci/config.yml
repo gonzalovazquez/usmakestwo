@@ -6,12 +6,14 @@ base_image: &base_image
   hashicorp/terraform:light
 
 working_directory: &working_directory
-  ~/terraform
+  ~/dist
 
 default_config: &default_config
   docker:
     - image: *base_image
   working_directory: *working_directory
+  environment:
+    BASH_ENV: /root/.bashrc
 
 repo_cache_key: &repo_cache_key
   v1-repo-{{ .Branch }}-{{ .Revision }}
@@ -27,25 +29,40 @@ save_repo: &save_repo
     paths:
       - *working_directory
 
+set_terraform_environment: &set_terraform_environment
+  run:
+    name: set terraform environment
+    command: |
+      cd && touch $BASH_ENV
+
+      if [ "${CIRCLE_BRANCH}" == "master" ]; then
+        echo 'export TERRAFORM_ENVIRONMENT=production' >> $BASH_ENV
+      else
+        echo 'export TERRAFORM_ENVIRONMENT=staging' >> $BASH_ENV
+      fi
+
 terraform_init: &terraform_init
   run:
     name: terraform init
     command: |
-      cd terraform
+      source $BASH_ENV
+      cd environments/$TERRAFORM_ENVIRONMENT
       terraform init
 
 apply_job: &apply_job
   <<: *default_config
   steps:
     - *restore_repo
+    - *set_terraform_environment
     - *terraform_init
     - attach_workspace:
         at: *working_directory
     - run:
         name: terraform apply
         command: |
-          cd terraform
-          terraform apply
+          source $BASH_ENV
+          cd environments/$TERRAFORM_ENVIRONMENT
+          terraform apply --auto-approve ../../terraform.plan
 
 jobs:
 
@@ -53,10 +70,12 @@ jobs:
     <<: *default_config
     steps:
       - checkout
+      - *set_terraform_environment
       - run:
           name: terraform fmt
           command: |
-            cd terraform
+            source $BASH_ENV
+            cd environments/$TERRAFORM_ENVIRONMENT
 
             if [ $(terraform fmt | grep -v .terraform | tee fmt_result.txt | wc -l) -gt 0 ]; then
               echo "Format of this terraform files is not appropiate:"
@@ -77,12 +96,18 @@ jobs:
     <<: *default_config
     steps:
       - *restore_repo
+      - *set_terraform_environment
       - *terraform_init
       - run:
           name: terraform plan
           command: |
-            cd terraform
+            source $BASH_ENV
+            cd environments/$TERRAFORM_ENVIRONMENT
             terraform plan -out=../../terraform.plan
+      - persist_to_workspace:
+          root: *working_directory
+          paths:
+            - terraform.plan
 
   apply:
     <<: *apply_job
