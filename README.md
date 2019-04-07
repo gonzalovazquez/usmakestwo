@@ -29,3 +29,4 @@ Following the [GCP tutorial](https://www.terraform.io/docs/providers/google/gett
 
 - https://cloud.google.com/storage/docs/hosting-static-website
 - https://www.terraform.io/docs/providers/google/getting_started.html
+- https://circleci.com/blog/deploying-using-terraform-gcp/
