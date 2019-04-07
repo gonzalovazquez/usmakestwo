@@ -1,5 +1,7 @@
 # usmakestwo
 
+[![CircleCI](https://circleci.com/gh/gonzalovazquez/usmakestwo.svg?style=svg)](https://circleci.com/gh/gonzalovazquez/usmakestwo)
+
 Landing page for Us Makes Two
 
 ### Requirements
@@ -30,3 +32,4 @@ Following the [GCP tutorial](https://www.terraform.io/docs/providers/google/gett
 - https://cloud.google.com/storage/docs/hosting-static-website
 - https://www.terraform.io/docs/providers/google/getting_started.html
 - https://circleci.com/blog/deploying-using-terraform-gcp/
+- https://github.com/usmakestwo/terraform-with-circleci-example
