@@ -5,5 +5,5 @@ variable "project_name" {
 
 variable "website_domain" {
   type    = "string"
-  default = "www.usmakestwo.io"
+  default = "www.usmakestwo.com"
 }
