@@ -33,6 +33,8 @@ terraform_init: &terraform_init
     command: |
       cd environments/usmakestwo.io
       terraform init
+      cd environments/usmakestwo.com
+      terraform init
 
 apply_job: &apply_job
   <<: *default_config
@@ -45,6 +47,8 @@ apply_job: &apply_job
         name: terraform apply
         command: |
           cd environments/usmakestwo.io
+          terraform apply --auto-approve ../../terraform.plan
+          cd environments/usmakestwo.com
           terraform apply --auto-approve ../../terraform.plan
 
 jobs:
@@ -71,6 +75,21 @@ jobs:
 
               exit 1
             fi
+            cd environments/usmakestwo.com
+
+            if [ $(terraform fmt | grep -v .terraform | tee fmt_result.txt | wc -l) -gt 0 ]; then
+              echo "Format of this terraform files is not appropiate:"
+              echo
+
+              cat fmt_result.txt
+              rm fmt_result.txt
+              git checkout -- .
+
+              echo
+              echo "Please run terraform fmt"
+
+              exit 1
+            fi
       - *save_repo
 
   plan:
@@ -82,6 +101,8 @@ jobs:
           name: terraform plan
           command: |
             cd environments/usmakestwo.io
+            terraform plan -out=../../terraform.plan
+            cd environments/usmakestwo.com
             terraform plan -out=../../terraform.plan
       - persist_to_workspace:
           root: *working_directory
