@@ -38,7 +38,6 @@ set_terraform_environment: &set_terraform_environment
         echo 'export TERRAFORM_ENVIRONMENT=com' >> $BASH_ENV
       else
         echo 'export TERRAFORM_ENVIRONMENT=io' >> $BASH_ENV
-      echo $TERRAFORM_ENVIRONMENT
       fi
 
 terraform_init: &terraform_init
