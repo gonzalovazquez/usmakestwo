@@ -48,6 +48,7 @@ apply_job: &apply_job
         command: |
           cd environments/usmakestwo.io
           terraform apply --auto-approve ../../terraform.plan
+          cd ..
           cd environments/usmakestwo.com
           terraform apply --auto-approve ../../terraform.plan
 
