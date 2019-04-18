@@ -27,6 +27,10 @@ Following the [GCP tutorial](https://www.terraform.io/docs/providers/google/gett
 
 3. Site is published
 
+## Add Domain to Bucket
+
+- https://domains.google/#/
+
 #### Reference:
 
 - https://cloud.google.com/storage/docs/hosting-static-website
