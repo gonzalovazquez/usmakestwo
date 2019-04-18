@@ -29,7 +29,8 @@ Following the [GCP tutorial](https://www.terraform.io/docs/providers/google/gett
 
 ## Add Domain to Bucket
 
-- https://domains.google/#/
+- https://domains.google
+- https://www.google.com/webmasters/verification/home?pli=1&authuser=1
 
 #### Reference:
 
