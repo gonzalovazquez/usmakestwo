@@ -1,0 +1,60 @@
+baseURL: http://www.usmakestwo.io/
+languageCode: en-us
+title: UsMakesTwo
+theme: hugo-fresh
+
+params:
+  navbarlogo:
+  # Logo (from /images/logos/___)
+   image: logos/um2long.png
+   link: /
+  font:
+    name: "Open Sans"
+    sizes: [400,600]
+  hero:
+    # Main hero title
+    title: Enterpise Solutions. At Scale.
+    # Hero subtitle (optional)
+    subtitle: Dedicated to solve wicked problems in a scalable and enterprise first approach.
+    # Button text
+    buttontext: Reach Out
+    # Where the main hero button links to
+    buttonlink: "mailto:gvazquez@usmakestwo.com"
+    # Hero image (from /images/___)
+    image: illustrations/worker.svg
+    # Footer logos (from /images/logos/clients/___.svg)
+    clientlogos:
+    - cibc
+    - telus
+    - td
+  section1:
+    title: Solutions Offered
+    subtitle: with a great smile and of course documentation
+    tiles:
+    - title: Software Development
+      icon: laptop-cloud
+      text: We offer full-cycle development services using the latest open source technologies.
+    - title: System Design
+      icon: mouse-globe
+      text: We help guide you into designing systems that are scalable and sustainable.
+    - title: Analytics First Approach
+      icon: plug-cloud
+      text: We help you migrate your organization into a data driven decision engine.
+  section4:
+    title: Our Clients love us!
+    subtitle: And we love them back
+    clients:
+    - name: Tom Vogel
+      quote: Gonzalo is a brilliant technologist and a wonderful human being. While we only worked together for a year, he had already made an enormous impact to our Big Data and Analytics reference architecture, pushing our A/B testing and event handling abilities to the bleeding edge.
+      job: Cloud Architect
+      img: 2
+  footer:
+    # Logo (from /images/logos/___)
+    logo: um2.png
+    # Social media links (GitHub, Twitter, etc.). All are optional.
+    socialmedia:
+    - link: http://github.com/usmakestwo/
+      icon: github
+    - link: https://twitter.com/usmakestwo
+      icon: twitter
+    bulmalogo: false
