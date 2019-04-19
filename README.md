@@ -1,6 +1,6 @@
 # usmakestwo
 
-[![CircleCI](https://circleci.com/gh/gonzalovazquez/usmakestwo.svg?style=svg)](https://circleci.com/gh/gonzalovazquez/usmakestwo)
+[![CircleCI](https://circleci.com/gh/gonzalovazquez/usmakestwo.svg?style=svg&circle-token=4dffb1ca0e57aa7015ebf92cd6b7420717cf353d)](https://circleci.com/gh/gonzalovazquez/usmakestwo)
 
 Landing page for Us Makes Two
 
