@@ -1,6 +1,6 @@
 config/*.json
-hugo/resources/_gen
-hugo/themes/**/resources/_gen
+resources/_gen
+themes/**/resources/_gen
 
 # Local .terraform directories
 **/.terraform/*

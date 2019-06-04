@@ -5,7 +5,7 @@
   "description": "Landing page for Us Makes Two",
   "private": true,
   "scripts": {
-    "start": "cd hugo && hugo server -D"
+    "start": "hugo server -D"
   },
   "contributors": [
     {
