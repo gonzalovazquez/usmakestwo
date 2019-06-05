@@ -6,6 +6,23 @@ Landing page for Us Makes Two
 
 ### Requirements
 
+1. Domain is verified with TXT records via [Google Webmaster Central](https://www.google.com/webmasters/verification/home?hl=en&authuser=1).
+
+<img width="1394" alt="image" src="https://user-images.githubusercontent.com/1566236/58974524-98328980-8790-11e9-9993-c08679d50223.png">
+
+2. Use A record instead of CNAME records for Apex domain.
+
+  a. Since we are hosting with Netlify and using Google for email records, we cannot have a CNAME apex domain because it interfers with MX records(email)
+
+<img width="1120" alt="Screen Shot 2019-06-05 at 12 46 34 PM" src="https://user-images.githubusercontent.com/1566236/58974304-1b071480-8790-11e9-845d-f89d34180e70.png">
+
+3. Check to see if records are updated:
+  - https://toolbox.googleapps.com/apps/dig/#TXT/
+  - https://toolbox.googleapps.com/apps/checkmx/
+
+
+### Requirements for using GCP with Terraform
+
 Following the [GCP tutorial](https://www.terraform.io/docs/providers/google/getting_started.html), the following steps are required to bootstrap the infrastructure.
 
 **Prerequisites**:
@@ -34,8 +51,11 @@ Following the [GCP tutorial](https://www.terraform.io/docs/providers/google/gett
 - https://domains.google
 - https://www.google.com/webmasters/verification/home?pli=1&authuser=1
 
-#### Reference:
+#### Resources:
 
+- https://www.whatsmydns.net/
+- https://www.netlify.com/docs/custom-domains/
+- https://www.netlify.com/blog/2017/02/28/to-www-or-not-www/
 - https://cloud.google.com/storage/docs/hosting-static-website
 - https://www.terraform.io/docs/providers/google/getting_started.html
 - https://circleci.com/blog/deploying-using-terraform-gcp/
