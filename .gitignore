@@ -1,76 +1,32 @@
-config/*.json
-resources/_gen
-themes/**/resources/_gen
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# Local .terraform directories
-**/.terraform/*
+# dependencies
+node_modules
+.docz
+.vscode
+# testing
+/coverage
 
-# .tfstate files
-*.tfstate
-*.tfstate.*
-
-# Crash log files
-crash.log
-
-# Ignore any .tfvars files that are generated automatically for each Terraform run. Most
-# .tfvars files are managed as part of configuration and so should be included in
-# version control.
-#
-# example.tfvars
-
-# Ignore override files as they are usually used to override resources locally and so
-# are not checked in
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Include override files you do wish to add to version control using negated pattern
-#
-# !example_override.tf
-
-# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.o
-*.so
- 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.rar
-*.tar
-*.zip
-*node_modules
-*public
-*bower_components
- 
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
- 
-# OS generated files #
-######################
+# production
+/build
+/dist
+.next
+next
+out
+# misc
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# SASS #
-######################
-**/.sass-cache
-**/.sass-cache/*
+#server file
+packages/functions/next
+package-lock.json
+.firebase
+.firebaserc
+#submodule
+packages/reusecore
+.cache/
+now.json
+firebase.json
