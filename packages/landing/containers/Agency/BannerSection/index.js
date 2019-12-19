@@ -22,12 +22,6 @@ const BannerSection = ({
   const ButtonGroup = () => (
     <Fragment>
       <Button title="LEARN MORE" {...btnStyle} />
-      <Button
-        title="WATCH WORKS"
-        variant="textButton"
-        icon={<i className="flaticon-next" />}
-        {...outlineBtnStyle}
-      />
     </Fragment>
   );
   return (
@@ -37,19 +31,19 @@ const BannerSection = ({
         <Box className="row" {...row}>
           <Box className="col" {...col}>
             <DiscountLabel>
-              <Text content="25% Discount" {...discountAmount} />
-              <Text content="on every first project budget" {...discountText} />
+              <Text content="Download our" {...discountAmount} />
+              <Text content="white paper on building scalable data solutions" {...discountText} />
             </DiscountLabel>
             <FeatureBlock
               title={
                 <Heading
-                  content="With Knowledge, Passion, Heart & Soul Agencies"
+                  content="Knowledge is Power."
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Agencies around the world are moving to the digital agencies. So, It is high time to introduce your agency digitaly ."
+                  content="Dedicated to solving wicked problems in a scalable and enterprise first approach."
                   {...description}
                 />
               }
