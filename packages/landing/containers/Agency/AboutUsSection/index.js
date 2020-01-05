@@ -6,7 +6,6 @@ import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Card from 'reusecore/src/elements/Card';
 import Image from 'reusecore/src/elements/Image';
-import Button from 'reusecore/src/elements/Button';
 import FeatureBlock from 'common/src/components/FeatureBlock';
 import AboutUsSectionWrapper from './aboutUsSection.style';
 
@@ -27,8 +26,7 @@ const AboutUsSection = ({
 }) => {
   return (
     <AboutUsSectionWrapper id="AboutUsSection">
-      <p>About Us</p>
-      {/* <Box className="row" {...row}>
+      <Box className="row" {...row}>
         <Box className="col" {...col}>
           <Card className="group-gallery">
             <Box className="col1">
@@ -74,7 +72,7 @@ const AboutUsSection = ({
             ))}
           </Box>
         </Box>
-      </Box> */}
+      </Box>
     </AboutUsSectionWrapper>
   );
 };
