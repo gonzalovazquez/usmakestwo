@@ -47,7 +47,7 @@ export default () => {
           </Sticky>
           <BannerSection />
           <FeatureSection />
-          <AboutUsSection />
+          {/* <AboutUsSection /> */}
           <WorkHistory />
           <TestimonialSection />
           <NewsletterSection />
