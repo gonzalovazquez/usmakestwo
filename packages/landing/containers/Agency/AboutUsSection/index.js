@@ -27,7 +27,8 @@ const AboutUsSection = ({
 }) => {
   return (
     <AboutUsSectionWrapper id="AboutUsSection">
-      <Box className="row" {...row}>
+      <p>About Us</p>
+      {/* <Box className="row" {...row}>
         <Box className="col" {...col}>
           <Card className="group-gallery">
             <Box className="col1">
@@ -73,7 +74,7 @@ const AboutUsSection = ({
             ))}
           </Box>
         </Box>
-      </Box>
+      </Box> */}
     </AboutUsSectionWrapper>
   );
 };
