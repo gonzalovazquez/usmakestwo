@@ -26,24 +26,23 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
               }
               description={
                 <Text
-                  content="We have worked with some leading agencies around the globe and their appreciation is our main strength ."
+                  content="We have worked with some leading companies around the globe and their appreciation is our main strength."
                   {...description}
                 />
               }
-              button={<Button title="WORK HISTORY" {...btnStyle} />}
             />
           </Box>
           <Box className="col" {...col}>
             <CounterUpArea>
               <Card className="card" {...cardStyle}>
                 <h3>
-                  <CountUp start={0} end={20} />+
+                  <CountUp start={0} end={4} />+
                 </h3>
                 <Text content="Companies Engaged" />
               </Card>
               <Card className="card" {...cardStyle}>
                 <h3>
-                  <CountUp start={0} end={199} duration={5} />
+                  <CountUp start={0} end={20} duration={5} />
                 </h3>
                 <Text content="Happy Customers" />
               </Card>
@@ -52,12 +51,6 @@ const WorkHistory = ({ row, col, cardStyle, title, description, btnStyle }) => {
                   <CountUp start={0} end={300} duration={5} />+
                 </h3>
                 <Text content="Project Complete" />
-              </Card>
-              <Card className="card" {...cardStyle}>
-                <Text content="& Much More" />
-                <Link href="#1">
-                  <a>View work history</a>
-                </Link>
               </Card>
             </CounterUpArea>
           </Box>

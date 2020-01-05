@@ -49,12 +49,7 @@ export default () => {
           <FeatureSection />
           <AboutUsSection />
           <WorkHistory />
-          <BlogSection />
-          <QualitySection />
-          <VideoSection />
           <TestimonialSection />
-          <TeamSection />
-          <FaqSection />
           <NewsletterSection />
           <Footer />
         </AgencyWrapper>

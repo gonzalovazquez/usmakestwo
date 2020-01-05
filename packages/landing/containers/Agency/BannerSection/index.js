@@ -47,7 +47,6 @@ const BannerSection = ({
                   {...description}
                 />
               }
-              button={<ButtonGroup />}
             />
           </Box>
         </Box>

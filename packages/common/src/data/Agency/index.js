@@ -2,10 +2,7 @@ import BlogImage1 from '../../assets/image/agency/blog/blog-img1.png';
 import BlogImage2 from '../../assets/image/agency/blog/blog-img2.png';
 import BlogImage3 from '../../assets/image/agency/blog/blog-img3.png';
 import Member1 from '../../assets/image/agency/team/member-1.jpg';
-import Member2 from '../../assets/image/agency/team/member-2.jpg';
-import Member3 from '../../assets/image/agency/team/member-3.jpg';
 import Denny from '../../assets/image/agency/client/denny.png';
-import Menny from '../../assets/image/agency/client/menny.png';
 
 const data = {
   menuItems: [
@@ -20,96 +17,81 @@ const data = {
       offset: '67',
     },
     {
-      label: 'Portfolio',
-      path: '#blogSection',
-      offset: '67',
-    },
-    {
-      label: 'Quality feature',
-      path: '#qualitySection',
-      offset: '67',
-    },
-    {
       label: 'Testimonial',
       path: '#testimonialSection',
       offset: '100',
-    },
-    {
-      label: 'Team Member',
-      path: '#teamSection',
-      offset: '67',
-    },
-    {
-      label: 'FAQ',
-      path: '#faqSection',
-      offset: '67',
-    },
+    }
   ],
   aboutus: [
     {
       id: 1,
-      title: 'Amazing communication experience.',
+      title: 'Data Journey',
       icon: 'flaticon-next',
     },
     {
       id: 2,
-      title: 'Best designing experience with trending tools and sizes.',
+      title: 'Big Data',
       icon: 'flaticon-next',
     },
     {
       id: 3,
-      title: 'Training and communication method remotely.',
+      title: 'Data Engineering',
       icon: 'flaticon-next',
     },
     {
       id: 4,
-      title: '24/7 Hour onine supports.',
+      title: 'Data Science',
       icon: 'flaticon-next',
     },
+    {
+      id: 5,
+      title: 'Data Visualization',
+      icon: 'flaticon-next',
+    }
   ],
   features: [
     {
       id: 1,
+      icon: 'flaticon-ruler',
+      title: 'Analytics First Approach',
+      description:
+        'We help you migrate your organization into a data driven decision engine.',
+    },
+    {
+      id: 2,
       icon: 'flaticon-flask',
       title: 'Search Optimization',
       description:
         'By using Search Engine Optimization, You will get more Clients',
     },
     {
-      id: 2,
-      icon: 'flaticon-pencil-case',
-      title: 'Ui/UX Design',
-      description:
-        'We provide the best UI/UX Design by following the latest trends of the market .',
-    },
-    {
       id: 3,
-      icon: 'flaticon-ruler',
-      title: 'Wireframing Task',
+      icon: 'flaticon-pencil-case',
+      title: 'Software Development',
       description:
-        'We respect our customer opinions and deals with them with perfect wireframing ',
+        'We offer full-cycle development services using the latest open source technologies.',
     },
     {
       id: 4,
-      icon: 'flaticon-startup',
-      title: 'Business Solutions',
+      icon: 'flaticon-ruler',
+      title: 'System Design',
       description:
-        'We are commited to provide proper business solutions with reasonable pricing',
+        'We help guide you into designing systems that are scalable and sustainable.',
     },
     {
       id: 5,
-      icon: 'flaticon-briefing',
-      title: 'Business Analysis',
+      icon: 'flaticon-ruler',
+      title: 'Data Pipeline',
       description:
-        'A day to day report about your ongoing business for proper understanding',
+        'We help guide you into designing systems that are scalable and sustainable.',
     },
     {
       id: 6,
-      icon: 'flaticon-creative',
-      title: 'Content Management',
+      icon: 'flaticon-ruler',
+      title: 'Personalization and Targeting',
       description:
-        'Proper Content Management is important to find out the real clients for your agencies',
-    },
+        'We help guide you into designing systems that are scalable and sustainable.',
+    }
   ],
   qualityFeature: [
     {
@@ -167,9 +149,9 @@ const data = {
   teamMember: [
     {
       id: 1,
-      name: 'Jessica Fanddy',
+      name: 'Gonzalo Vazquez',
       thumbnail_url: Member1,
-      designation: 'Co Founder',
+      designation: 'Founder',
       social_links: [
         {
           id: 1,
@@ -192,97 +174,17 @@ const data = {
           url: '#',
         },
       ],
-    },
-    {
-      id: 2,
-      name: 'Devid Justingul',
-      thumbnail_url: Member2,
-      designation: 'Senior Ui/UX Designer',
-      social_links: [
-        {
-          id: 1,
-          icon: 'flaticon-facebook-logo',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-twitter-logo-silhouette',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-instagram',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-dribble-logo',
-          url: '#',
-        },
-      ],
-    },
-    {
-      id: 3,
-      name: 'Handdy Albuzz',
-      thumbnail_url: Member3,
-      designation: 'Article Writer',
-      social_links: [
-        {
-          id: 1,
-          icon: 'flaticon-facebook-logo',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-twitter-logo-silhouette',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-instagram',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-dribble-logo',
-          url: '#',
-        },
-      ],
-    },
+    }
   ],
   testimonial: [
     {
       id: 1,
-      name: 'Jon Doe',
-      designation: 'CEO of Denish Co.',
+      name: 'Tom Vogel',
+      designation: 'Cloud Architect',
       comment:
-        'Best working experience  with this amazing team & in future, we want to work together',
+        'Gonzalo is a brilliant technologist and a wonderful human being. While we only worked together for a year, he had already made an enormous impact to our Big Data and Analytics reference architecture, pushing our A/B testing and event handling abilities to the bleeding edge. Additionally, he drove serious cultural improvements, with his humble, mission-driven, egoless approach to work.',
       avatar_url: Denny,
-    },
-    {
-      id: 2,
-      name: 'Roman Ul Oman',
-      designation: 'Co-founder of QatarDiaries',
-      comment:
-        'Impressed with master class support of the team and really look forward for the future.',
-      avatar_url: Menny,
-    },
-    {
-      id: 3,
-      name: 'Jone Doe',
-      designation: 'Director of Beauty-queen',
-      comment:
-        'I have bought more than 10 themes on ThemeForest, and this is the first one I review. Wow! Amazing React Theme',
-      avatar_url: Denny,
-    },
-    {
-      id: 4,
-      name: 'Roman Ul Oman',
-      designation: 'Co-founder of QatarDiaries',
-      comment:
-        'Impressed with master class support of the team and really look forward for the future.',
-      avatar_url: Menny,
-    },
+    }
   ],
   faq: [
     {
@@ -435,29 +337,9 @@ const data = {
   social_profile: [
     {
       id: 1,
-      icon: 'flaticon-facebook-logo',
+      icon: 'flaticon-github-logo',
       link: '#1',
-    },
-    {
-      id: 2,
-      icon: 'flaticon-twitter-logo-silhouette',
-      link: '#2',
-    },
-    {
-      id: 3,
-      icon: 'flaticon-instagram',
-      link: '#3',
-    },
-    {
-      id: 4,
-      icon: 'flaticon-tumblr-logo',
-      link: '#4',
-    },
-    {
-      id: 5,
-      icon: 'flaticon-dribble-logo',
-      link: '#5',
-    },
+    }
   ],
 };
 export default data;

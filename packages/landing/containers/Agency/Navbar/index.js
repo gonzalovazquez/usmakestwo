@@ -12,7 +12,7 @@ import SearchPanel from '../SearchPanel';
 import LoginModal from '../LoginModal';
 import CopyrightSection from '../CopyrightsSection';
 
-import LogoImage from 'common/src/assets/image/agency/logo.png';
+import LogoImage from 'common/src/assets/image/agency/um2long.png';
 
 import { DrawerContext } from 'common/src/contexts/DrawerContext';
 
@@ -104,18 +104,6 @@ const Navbar = ({ navbarStyle, logoStyle }) => {
           logoStyle={logoStyle}
         />
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Button
-            variant="textButton"
-            onClick={handleSearchModal}
-            icon={<i className="flaticon-magnifying-glass" />}
-            aria-label="search"
-          />
-          <Button
-            variant="textButton"
-            onClick={handleLoginModal}
-            icon={<i className="flaticon-user" />}
-            aria-label="login"
-          />
           <Drawer
             width="420px"
             placement="right"
@@ -149,7 +137,7 @@ Navbar.defaultProps = {
   },
   // Default logo size
   logoStyle: {
-    width: '128px',
+    width: '200px',
     height: 'auto',
   },
 };

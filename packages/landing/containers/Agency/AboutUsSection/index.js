@@ -50,13 +50,13 @@ const AboutUsSection = ({
             <FeatureBlock
               title={
                 <Heading
-                  content="Great Responsive & Strong Competitive People"
+                  content="Experience Providing Enterprise Solutions in a Scalable Way"
                   {...title}
                 />
               }
               description={
                 <Text
-                  content="Some hardworking People are Working Day and Night to provide you highly scalable product . "
+                  content="Our team of talents has the necessary creativity, wit, and implementation capacity to help organizations to analyze and understand data, and turn it into intelligent decisions."
                   {...description}
                 />
               }
@@ -71,7 +71,6 @@ const AboutUsSection = ({
                 title={<Heading content={feature.title} {...featureTitle} />}
               />
             ))}
-            <Button title="DISCOVER ITEM" {...btnStyle} />
           </Box>
         </Box>
       </Box>

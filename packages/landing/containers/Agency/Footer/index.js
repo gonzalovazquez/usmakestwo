@@ -1,23 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
-import Heading from 'reusecore/src/elements/Heading';
 import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
-import FooterWrapper, { List, ListItem } from './footer.style';
+import FooterWrapper from './footer.style';
 
-import LogoImage from 'common/src/assets/image/agency/logo.png';
-
-import data from 'common/src/data/Agency';
+import LogoImage from 'common/src/assets/image/agency/um2long.png';
 
 const Footer = ({
   row,
-  col,
   colOne,
-  colTwo,
-  titleStyle,
   logoStyle,
   textStyle,
 }) => {
@@ -32,27 +25,10 @@ const Footer = ({
               title="Agency"
               logoStyle={logoStyle}
             />
-            <Text content="hello@redq.io" {...textStyle} />
-            <Text content="+479-443-9334" {...textStyle} />
+            <Text content="hello@usmakestwo.io" {...textStyle} />
+            <Text content="+1416-910-2047" {...textStyle} />
           </Box>
           {/* End of footer logo column */}
-          <Box {...colTwo}>
-            {data.menuWidget.map(widget => (
-              <Box className="col" {...col} key={widget.id}>
-                <Heading content={widget.title} {...titleStyle} />
-                <List>
-                  {widget.menuItems.map(item => (
-                    <ListItem key={`list__item-${item.id}`}>
-                      <Link href={item.url}>
-                        <a className="ListItem">{item.text}</a>
-                      </Link>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            ))}
-          </Box>
-          {/* End of footer List column */}
         </Box>
       </Container>
     </FooterWrapper>
@@ -108,7 +84,7 @@ Footer.defaultProps = {
   },
   // Default logo size
   logoStyle: {
-    width: '128px',
+    width: '200px',
     mb: '15px',
   },
   // widget text default style
